@@ -18,13 +18,13 @@
     border: 3px solid white;
     border-bottom: none;
 }
-/*
+
 .content {
     max-height: 0;
     overflow:hidden;
     transition: max-height 0.2s ease-out;
     background-color: white;
-}*/
+}
 
 .full-chat-block {
     width: 350px;
@@ -128,7 +128,7 @@
 .botText span {
     line-height: 1.5em;
     display: inline-block;
-    background: #b71717;
+    background: #e0e0e0;
     padding: 10px;
     border-radius: 8px;
     border-bottom-left-radius: 2px;
@@ -137,6 +137,35 @@
     animation: floatup .5s forwards;
 }
 
+@keyframes floatup {
+    from {
+        transform: translateY(14px);
+        opacity: .0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .full-chat-block {
+        width: 100%;
+        border-radius: 0px;
+    }
+    .chat-bar-collapsible {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+    }
+    .collapsible {
+        width: 100%;
+        border: 0px;
+        border-top:3px solid white;
+        border-radius:0px;
+    }
+}
 
 
 
